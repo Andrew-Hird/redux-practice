@@ -7,3 +7,13 @@ export const addWord = (word) => {
     word
   }
 }
+
+let nextImageId = 0
+
+export const addImage = (image) => {
+  return {
+    type: 'ADD_IMAGE',
+    id: nextImageId++,
+    image
+  }
+}
