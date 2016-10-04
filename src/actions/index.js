@@ -8,6 +8,13 @@ export const addWord = (word) => {
   }
 }
 
+export const deleteWord = (id) => {
+  return {
+    type: 'DELETE_WORD',
+    id
+  }
+}
+
 let nextImageId = 0
 
 export const addImage = (image) => {
@@ -15,5 +22,15 @@ export const addImage = (image) => {
     type: 'ADD_IMAGE',
     id: nextImageId++,
     image
+  }
+}
+
+let nextVideoId = 0
+
+export const addVideo = (video) => {
+  return {
+    type: 'ADD_VIDEO',
+    id: nextVideoId++,
+    video
   }
 }
